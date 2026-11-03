@@ -1084,41 +1084,54 @@ footer small {
 }
 
 @media(max-width:760px) {
+   /* Responsive Navigation */
+@media (max-width: 900px) {
+
     .nav {
-        padding: 0 5%;
-        gap: 10px
+        min-height: 60px;
+        justify-content: space-between;
+        padding: 10px 5%;
+    }
+
+    .brand {
+        position: static;
+    }
+
+    #menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .download {
+        display: none;
     }
 
     .nav nav {
         display: none;
         position: absolute;
-        top: 42px;
+        top: 100%;
         left: 0;
         right: 0;
+        width: 100%;
+        max-width: none;
         height: auto;
         background: #08152f;
-        padding: 15px 5%;
+        padding: 18px 5%;
         flex-direction: column;
-        gap: 13px;
-        align-items: flex-start
+        align-items: center;
+        gap: 12px;
+        border-top: 1px solid #ffffff20;
     }
 
     .nav nav.open {
-        display: flex
+        display: flex;
     }
 
     .nav nav a {
-        height: auto;
-        font-size: 12px
+        font-size: 13px;
+        padding: 7px;
     }
-
-    #menu {
-        display: block
-    }
-
-    .download {
-        margin-left: auto
-    }
+}
 
     .hero {
         padding: 0 5%;
