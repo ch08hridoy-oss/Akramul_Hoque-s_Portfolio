@@ -1,27 +1,72 @@
-const menu = document.getElementById('menu');
-const nav = document.getElementById('nav');
+/* ========================================
+   HOME DROPDOWN NAVIGATION
+======================================== */
 
-if (menu && nav) {
+// Close dropdown after clicking a section link
+document.querySelectorAll('.topbar-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        const dropdown = link.closest('.topbar-dropdown');
 
-    // Mobile menu open / close
-    menu.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('open');
-        menu.setAttribute('aria-expanded', isOpen);
+        if (dropdown) {
+            dropdown.open = false;
+        }
     });
+});
 
-    // Close menu after clicking any navigation link
-    nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
+// Close dropdown when clicking outside
+document.addEventListener('click', (event) => {
+    document.querySelectorAll('.topbar-dropdown').forEach(dropdown => {
+        if (!dropdown.contains(event.target)) {
+            dropdown.open = false;
+        }
+    });
+});
 
-            nav.classList.remove('open');
-            menu.setAttribute('aria-expanded', 'false');
-
-            // Close Home dropdown
-            const dropdown = link.closest('.home-dropdown');
-
-            if (dropdown) {
-                dropdown.open = false;
-            }
+// Close dropdown with Escape key
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        document.querySelectorAll('.topbar-dropdown').forEach(dropdown => {
+            dropdown.open = false;
         });
+    }
+});
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name')?.value.trim() || '';
+        const email = document.getElementById('email')?.value.trim() || '';
+        const subject = document.getElementById('subject')?.value || '';
+        const message = document.getElementById('message')?.value.trim() || '';
+
+        const formNote = document.getElementById('form-note');
+
+        if (formNote) {
+            formNote.textContent = 'Opening your email app...';
+        }
+
+        const mailSubject = encodeURIComponent(
+            'Portfolio inquiry: ' + subject
+        );
+
+        const mailBody = encodeURIComponent(
+            'Name: ' + name +
+            '\nEmail: ' + email +
+            '\nSubject: ' + subject +
+            '\n\n' + message
+        );
+
+        window.location.href =
+            'mailto:hridoyakramulhouqe@gmail.com' +
+            '?subject=' + mailSubject +
+            '&body=' + mailBody;
     });
 }
