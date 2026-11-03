@@ -1457,3 +1457,102 @@ footer small {
     gap: 12px;
   }
 }
+
+/* Business SP Portfolio Showcase */
+.business-work {
+  padding: 80px 20px;
+  background: var(--soft);
+  text-align: center;
+}
+
+.business-work-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 42px 28px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.business-work .section-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.business-work h2 {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 5vw, 42px);
+}
+
+.business-work-description {
+  max-width: 600px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.business-work-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.business-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.business-social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+}
+
+.facebook-btn {
+  background: #1877f2;
+}
+
+.linkedin-btn {
+  background: #0a66c2;
+}
+
+.business-social-btn span {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+@media (max-width: 520px) {
+  .business-work {
+    padding: 50px 16px;
+  }
+
+  .business-work-container {
+    padding: 32px 18px;
+  }
+
+  .business-work-buttons {
+    flex-direction: column;
+  }
+
+  .business-social-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
