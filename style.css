@@ -34,19 +34,18 @@ a {
 
 /* Centered Navigation */
 .nav {
-    min-height: 68px;
+    height: 42px;
     background: #08152ff7;
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 12px 150px;
-    gap: 15px;
+    justify-content: space-between;
+    padding: 0 max(calc((100% - 770px)/2), 5%);
+    gap: 24px;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #ffffff15;
-    backdrop-filter: blur(12px);
+    z-index: 10;
+    border-bottom: 1px solid #ffffff15
 }
 
 .brand {
