@@ -12,44 +12,48 @@
 <body>
     
 
-<header class="site-header">
-  <div class="nav-container">
+<header class="topbar">
 
-    <a href="#home" class="nav-logo"><span>.</span>
-    </a>
+    <!-- LEFT: HOME DROPDOWN -->
+    <div class="topbar-left">
+        <details class="topbar-dropdown">
 
-    <button class="menu-toggle" id="menu"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-            aria-controls="nav">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+            <summary class="topbar-home">
+                Home <span>⌄</span>
+            </summary>
 
-    <nav id="nav">
+            <div class="topbar-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#courses">Courses</a>
+                <a href="#projects">Projects</a>
+                <a href="#business-work">Business SP</a>
+                <a href="#experience">Journey</a>
+                <a href="#activities">Activities</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
 
-    <details class="home-dropdown">
-        <summary>
-            Home <span class="dropdown-arrow">⌄</span>
-        </summary>
+        </details>
+    </div>
 
-        <div class="dropdown-menu">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#courses">Courses</a>
-            <a href="#projects">Projects</a>
-            <a href="#business-work">Business SP</a>
-            <a href="#experience">Journey</a>
-            <a href="#activities">Activities</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </details>
+    <!-- RIGHT: ACTION BUTTONS -->
+    <div class="topbar-actions">
 
-    <div class="nav-actions">
+        <a class="topbar-cv"
+           href="assets/AKRAMUL_HOQUE's_Europass_CV.pdf"
+           download>
+            Download CV ↓
+        </a>
 
+        <a class="topbar-talk" href="#contact">
+            Let's Talk ↗
+        </a>
+
+    </div>
+
+</header>
         <!-- এখানে আগের Download CV link-এর href অপরিবর্তিত রাখবে -->
         <a class="download"
            href="assets/AKRAMUL_HOQUE's_Europass_CV.pdf"
