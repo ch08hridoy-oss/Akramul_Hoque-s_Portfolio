@@ -1407,3 +1407,53 @@ footer small {
     gap: 24px;
   }
 }
+
+/* Social Media Icons */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 21px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  color: #ffffff;
+}
+
+.social-icon.facebook:hover {
+  background: #1877f2;
+}
+
+.social-icon.linkedin:hover {
+  background: #0a66c2;
+}
+
+.social-icon.github:hover {
+  background: #24292f;
+}
+
+.social-icon.whatsapp:hover {
+  background: #25d366;
+}
+
+@media (max-width: 480px) {
+  .social-links {
+    gap: 12px;
+  }
+}
