@@ -1,1 +1,15 @@
-const menu=document.getElementById('menu'),nav=document.getElementById('nav');menu.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();let n=document.getElementById('name').value.trim(),em=document.getElementById('email').value.trim(),s=document.getElementById('subject').value,m=document.getElementById('message').value.trim();document.getElementById('form-note').textContent='Opening your email app…';location.href='mailto:hridoyakramulhouqe@gmail.com?subject='+encodeURIComponent('Portfolio inquiry: '+s)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+em+'\nSubject: '+s+'\n\n'+m)});
+
+const menu = document.getElementById('menu');
+const nav = document.getElementById('nav');
+
+menu.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', isOpen);
+});
+
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menu.setAttribute('aria-expanded', 'false');
+  });
+});
