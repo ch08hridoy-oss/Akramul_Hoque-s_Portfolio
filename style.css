@@ -1556,3 +1556,86 @@ footer small {
     box-sizing: border-box;
   }
 }
+
+
+/* Certificate & Achievement Cards */
+
+.certificates {
+  background: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.certificate-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(8, 21, 47, 0.06);
+}
+
+.certificate-preview {
+  display: grid;
+  place-items: center;
+  height: 165px;
+  padding: 12px;
+  background: var(--pale);
+}
+
+.certificate-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.certificate-content {
+  padding: 12px;
+}
+
+.certificate-content small {
+  color: var(--blue);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.certificate-content h3 {
+  font: 800 11px Manrope, sans-serif;
+  color: var(--ink);
+  margin: 7px 0;
+}
+
+.certificate-content p {
+  font-size: 8px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.certificate-content a {
+  color: var(--blue);
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.certificate-content a:hover {
+  color: var(--purple);
+}
+
+@media (max-width: 760px) {
+  .certificate-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
